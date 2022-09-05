@@ -1,0 +1,20 @@
+IMPORTANT COMMANDS: 
+❇️ WINDOWS: 
+
+1. For creating the keystore file i.e., debug.keystore 
+
+keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android -keyalg RSA -keysize 2048 -validity 10000
+
+2. For viewing the SHA-1 key from the keystore file that we created 
+
+keytool -list -v -keystore "C:\Users\Shivansh Singh["Replace with your uername"]\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+❇️ macOS
+
+1. For creating the keystore file 
+
+keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
+
+2. For generating the SHA-1 key 
+
+keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
